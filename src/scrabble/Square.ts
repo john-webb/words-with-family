@@ -1,6 +1,12 @@
 import { Tile } from './Tile';
 
-export type SpecialSquare = 'double-word' | 'triple-word' | 'center-star' | null;
+export type SpecialSquare = 
+'double-word' | 
+'triple-word' | 
+'double-letter' | 
+'triple-letter' | 
+'center-star' | 
+null;
 
 export class Square {
     public tile: Tile | null;

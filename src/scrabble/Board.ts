@@ -35,6 +35,25 @@ export class Board {
             specialSquares[this.BOARD_SIZE - 1 - i][i] = 'double-word';
             specialSquares[this.BOARD_SIZE - 1 - i][this.BOARD_SIZE - 1 - i] = 'double-word';
         }
+
+        // Triple letter squares
+        for (let i = 1; i < this.BOARD_SIZE; i += 4) {
+            for (let j = 1; j < this.BOARD_SIZE; j += 4) {
+                if (i !== Math.floor(this.BOARD_SIZE / 2) || j !== Math.floor(this.BOARD_SIZE / 2)) {
+                    specialSquares[i][j] = 'triple-letter';
+                }
+            }
+        }
+
+        // Double letter squares
+        for (let i = 0; i < this.BOARD_SIZE; i++) {
+            for (let j = 0; j < this.BOARD_SIZE; j++) {
+                if ((i === j || i + j === this.BOARD_SIZE - 1) && (i % 4 !== 0 && j % 4 !== 0)) {
+                    specialSquares[i][j] = 'double-letter';
+                }
+            }
+        }
+
         // Center star
         specialSquares[Math.floor(this.BOARD_SIZE / 2)][Math.floor(this.BOARD_SIZE / 2)] = 'center-star';
 

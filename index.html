@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Scrabble Board</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Scrabble Board</title>
 </head>
 <body>
     <div class="game-container">
@@ -15,30 +14,5 @@
             <!-- Rack tiles will be here -->
         </div>
     </div>
-
-    <script type="module">
-        import { Board } from './src/scrabble/Board.js';
-
-        const board = new Board();
-        const boardElement = document.querySelector('.board');
-
-        for (const { x, y, square } of board.gridIterator()) {
-            const squareElement = document.createElement('div');
-            squareElement.className = 'square';
-            squareElement.dataset.row = x;
-            squareElement.dataset.col = y;
-
-            // Add special square classes
-            if (square.special === 'double-word') {
-                squareElement.classList.add('double-word');
-            } else if (square.special === 'triple-word') {
-                squareElement.classList.add('triple-word');
-            } else if (square.special === 'center-star') {
-                squareElement.classList.add('center-star');
-            }
-
-            boardElement.appendChild(squareElement);
-        }
-    </script>
 </body>
 </html>

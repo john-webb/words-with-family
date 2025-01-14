@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+:root {
+    --cell-size: calc(min(100vw, 100vh) / var(--grid-size));
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    background-color: #333;
+    width: calc(var(--grid-size) * var(--cell-size));
+    height: calc(var(--grid-size) * var(--cell-size));
+}
+
+.square {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid #000;
+    background-color: #e8dcc4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    position: relative;
+}
+
+.double-word {
+    background-color: pink;
+}
+
+.triple-word {
+    background-color: red;
+}
+
+.double-letter {
+    background-color: lightblue;
+}
+
+.triple-letter {
+    background-color: blue;
+}
+
+.center-star {
+    background-color: yellow;
+}

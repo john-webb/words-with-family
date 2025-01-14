@@ -4,8 +4,8 @@
   "description": "A Scrabble game implementation in TypeScript.",
   "main": "src/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
     "test": "jest"
   },
   "keywords": [
@@ -16,10 +16,17 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "typescript": "^4.0.0",
     "jest": "^26.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.0"
+    "@types/jest": "^26.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }
