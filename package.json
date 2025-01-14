@@ -1,0 +1,25 @@
+{
+  "name": "my-scrabble-project",
+  "version": "1.0.0",
+  "description": "A Scrabble game implementation in TypeScript.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "scrabble",
+    "game",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.0.0",
+    "jest": "^26.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.0"
+  }
+}
