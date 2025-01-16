@@ -1,5 +1,5 @@
 {
-  "name": "my-scrabble-project",
+  "name": "words-with-family",
   "version": "1.0.0",
   "description": "A Scrabble game implementation in TypeScript.",
   "main": "src/index.js",
