@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+:root {
+    --grid-size: 15;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.board-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: black;
+}
+
+input[type="number"] {
+    font-size: 1.2em;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-rows: repeat(var(--grid-size), 1fr);
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    max-width: min(100vw, 100vh);
+    max-height: min(100vw, 100vh);
+}
+
+.square {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    background-color: #00913c; /* Scrabble green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--cell-size) * 0.2);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; 
+}
+
+.double-word {
+    background-color: #fcbc17;
+}
+
+.triple-word {
+    background-color: red;
+}
+
+.double-letter {
+    background-color: lightblue;
+}
+
+.triple-letter {
+    background-color: #12a1e1;
+}
+
+.center-star {
+    background-color: yellow;
+}
