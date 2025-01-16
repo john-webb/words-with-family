@@ -3,11 +3,12 @@ import { Tile } from "./Tile";
 
 export class Board {
 
-    public BOARD_SIZE = 15;
+    public BOARD_SIZE: number;
 
     private grid: (Square | null)[][];
     
-    constructor() {
+    constructor(boardSize: number = 15) {
+        this.BOARD_SIZE = boardSize;
         this.grid = this.initializeBoard();
     }
 

@@ -8,9 +8,9 @@ class Scrabble {
     private currentPlayerIndex: number;
     private gameStarted: boolean;
 
-    constructor() {
+    constructor(boardSize: number = 15) {
         this.players = [];
-        this.board = new Board();
+        this.board = new Board(boardSize);
         this.currentPlayerIndex = 0;
         this.gameStarted = false;
     }
